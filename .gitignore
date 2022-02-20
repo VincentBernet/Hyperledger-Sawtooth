@@ -1,0 +1,4 @@
+client/dist/
+client/node_modules
+processor/node_modules
+README copy.md
