@@ -2,41 +2,61 @@
 <html>
 	<head>
 		<title>Transfer Chain</title>
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="styles/index.css" />
 	</head>
 	<body>
-		<h1>Transfer Chain</h1>
-		<div>
-			<h2>Select User</h2>
-			<select name="keySelect">
-				<option value="none" selected>Select public key...</option>
-				<option value="new">Create new key pair</option>
-			</select>
+		<header>
+			<h1 class="title">Chaine de transfert avec Hyperledger-Sawtooth</h1>
+		</header>
+		<div class="container">
+			<div class="cardContainer selectContainer">
+				<h2>
+					Sélection de l'utilisateur
+					<div class="imageUser"></div>
+				</h2>
+				<select name="keySelect">
+					<option value="none" selected>Choix de la clef publique</option>
+					<option value="new">Création d'une nouvelle clef</option>
+				</select>
+			</div>
+
+			<div class="cardContainer createContainer">
+				<h2>Création d'une nouvelle devise</h2>
+				<input
+					id="createName"
+					type="text"
+					placeholder="Entrer le nom de la devise ..."
+				/>
+				<input id="createSubmit" type="button" value="Création" />
+			</div>
+
+			<div class="cardContainer transferContainer">
+				<h2>Transfert de devise</h2>
+				<select name="assetSelect">
+					<option value="none" selected>Devise à transférer</option>
+				</select>
+				<select name="transferSelect">
+					<option value="none" selected>Choix du destinataire</option>
+				</select>
+				<input id="transferSubmit" type="button" value="Transférer" />
+			</div>
+
+			<div class="cardContainer acceptContainer">
+				<h2>Accepter une transaction</h2>
+				<div id="transferList"></div>
+			</div>
+
+			<div class="cardContainer assetListContainer">
+				<h2>Liste des opérations :</h2>
+				<table>
+					<tr>
+						<th>Devise</th>
+						<th>Propriétaire</th>
+					</tr>
+					<tbody id="assetList"></tbody>
+				</table>
+			</div>
 		</div>
-		<h2>Create Asset</h2>
-		<input id="createName" type="text" placeholder="Enter asset name..." />
-		<input id="createSubmit" type="button" value="Create" />
-
-		<h2>Transfer Asset</h2>
-		<select name="assetSelect">
-			<option value="none" selected>Création de votre monney</option>
-		</select>
-		<select name="transferSelect">
-			<option value="none" selected>Select recipient...</option>
-		</select>
-		<input id="transferSubmit" type="button" value="Transfer" />
-
-		<h2>Accept Asset</h2>
-		<div id="transferList"></div>
-
-		<h2>Asset List</h2>
-		<table>
-			<tr>
-				<th>Asset</th>
-				<th>Owner</th>
-			</tr>
-			<tbody id="assetList"></tbody>
-		</table>
 
 		<script src="dist/bundle.js"></script>
 	</body>
