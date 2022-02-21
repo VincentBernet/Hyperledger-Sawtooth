@@ -3,6 +3,7 @@
 	<head>
 		<title>Transfer Chain</title>
 		<link rel="stylesheet" href="styles/index.css" />
+		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 	</head>
 	<body>
 		<header>
@@ -10,51 +11,93 @@
 		</header>
 		<div class="container">
 			<div class="cardContainer selectContainer">
-				<h2>
-					Sélection de l'utilisateur
-					<div class="imageUser"></div>
-				</h2>
-				<select name="keySelect">
-					<option value="none" selected>Choix de la clef publique</option>
-					<option value="new">Création d'une nouvelle clef</option>
-				</select>
+				<div>
+					<h2>
+						Sélection de l'utilisateur
+						<div class="imageUser"></div>
+					</h2>
+					<select name="keySelect">
+						<option value="none" selected>
+							Choix de la clef publique
+						</option>
+						<option value="new">Création d'une nouvelle clef</option>
+					</select>
+				</div>
+				<span
+					class="iconify"
+					data-icon="flat-ui:user-interface"
+					data-inline="false"
+					style="color: #888888"
+				></span>
 			</div>
 
 			<div class="cardContainer createContainer">
-				<h2>Création d'une nouvelle devise</h2>
-				<input
-					id="createName"
-					type="text"
-					placeholder="Entrer le nom de la devise ..."
-				/>
-				<input id="createSubmit" type="button" value="Création" />
+				<div>
+					<h2>Création d'une nouvelle devise</h2>
+					<input
+						id="createName"
+						type="text"
+						placeholder="Entrer le nom de la devise ..."
+					/>
+					<input id="createSubmit" type="button" value="Création" />
+				</div>
+				<span
+					class="iconify"
+					data-icon="flat-ui:wi-fi"
+					data-inline="false"
+					style="color: #888888"
+				></span>
 			</div>
 
 			<div class="cardContainer transferContainer">
-				<h2>Transfert de devise</h2>
-				<select name="assetSelect">
-					<option value="none" selected>Devise à transférer</option>
-				</select>
-				<select name="transferSelect">
-					<option value="none" selected>Choix du destinataire</option>
-				</select>
-				<input id="transferSubmit" type="button" value="Transférer" />
+				<div>
+					<h2>Transfert de devise</h2>
+					<select name="assetSelect">
+						<option value="none" selected>Devise à transférer</option>
+					</select>
+					<select name="transferSelect">
+						<option value="none" selected>Choix du destinataire</option>
+					</select>
+					<input id="transferSubmit" type="button" value="Transférer" />
+				</div>
+				<span
+					class="iconify"
+					data-icon="flat-ui:rocket"
+					data-inline="false"
+					style="color: #888888"
+				></span>
 			</div>
 
 			<div class="cardContainer acceptContainer">
-				<h2>Accepter une transaction</h2>
-				<div id="transferList"></div>
+				<div>
+					<h2>Accepter une transaction</h2>
+					<div id="transferList"></div>
+				</div>
+				<span
+					class="iconify"
+					data-icon="flat-ui:goal"
+					data-inline="false"
+					style="color: #888888"
+				></span>
 			</div>
 
 			<div class="cardContainer assetListContainer">
-				<h2>Liste des opérations :</h2>
-				<table>
-					<tr>
-						<th>Devise</th>
-						<th>Propriétaire</th>
-					</tr>
-					<tbody id="assetList"></tbody>
-				</table>
+				<div>
+					<h2>Liste des opérations :</h2>
+					<table>
+						<tr>
+							<th>Devise</th>
+							<th>Propriétaire</th>
+						</tr>
+						<tbody id="assetList"></tbody>
+					</table>
+				</div>
+				<span
+					class="iconify"
+					data-icon="flat-ui:eye"
+					data-inline="false"
+					style="color: #888888"
+				></span>
 			</div>
 		</div>
 

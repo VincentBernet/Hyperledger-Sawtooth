@@ -1,5 +1,5 @@
 header {
-	background-color: hsl(5, 15%, 5%);
+	background-color: #222222;
 	padding: 3rem 0rem 0rem 0rem;
 
 	.title {
@@ -22,8 +22,17 @@ header {
 
 .cardContainer {
 	border-radius: 2rem;
-	background-color: #f7f5fe;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	max-width: 40%;
 	padding: 3rem;
-	max-width: 30%;
-	margin: 2% auto 5% auto;
+	margin: 2% auto 3% auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+// Change font-size for second line
+.iconify {
+	font-size: 150px;
+	line-height: 32px;
 }
