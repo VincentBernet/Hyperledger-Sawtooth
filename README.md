@@ -1,7 +1,7 @@
 # BlockChain Project : Hyperledger-Sawtooth
 
 <img src="./assets/client_screenshot.jpg"/>
-<center><em>Screenshot du client</em></center>
+<div style="text-align:center"><em>Screenshot du client</em></div>
  <br>
 
 ## Installation
