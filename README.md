@@ -1,5 +1,7 @@
 # BlockChain Project : Hyperledger-Sawtooth
 
+<img src="./assets/client_screenshot.jpg"/>
+
 ## Installation
 
 This project requires both [Docker](https://www.docker.com/) and
