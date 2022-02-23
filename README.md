@@ -1,19 +1,20 @@
 # BlockChain Project : Hyperledger-Sawtooth
 
 <img src="./assets/client_screenshot.jpg"/>
+<center><em>Screenshot du client</em></center>
+ <br>
 
 ## Installation
 
-This project requires both [Docker](https://www.docker.com/) and
-[Node/NPM](https://nodejs.org/). After installing, download this repo and run
-the following commands to install dependencies for the transaction processor:
+Ce projet nécessite à la fois [Docker](https://www.docker.com/) et
+[Node/NPM](https://nodejs.org/). Après l'installation, téléchargez ce dépôt et exécutez les commandes suivantes pour installer les dépendances pour le processeur de transaction :
 
 ```bash
 cd {project directory}/processor
 npm install
 ```
 
-And these commands to install dependencies for and build the client:
+Et ces commandes pour installer les dépendances et build le client :
 
 ```bash
 cd {project directory}/client
@@ -23,63 +24,53 @@ npm run build
 
 ## Running
 
-### Sawtooth Components
+### **Composants Sawtooth**
 
-Use the included docker compose file to spin up some default Sawtooth
-components, including a validator and a REST API. Full instructions are
-available in the
+Utilisez le fichier docker compose inclus pour lancer certains composants par défaut de Sawtooth, notamment un validateur et une API REST. Des instructions complètes sont disponibles dans le
 [Sawtooth Documentation](https://sawtooth.hyperledger.org/docs/core/releases/0.8/app_developers_guide/docker.html),
-but all you really need to know is, from the project directory, run this
-command to start Sawtooth up:
+mais tout ce que vous devez savoir, c'est qu'à partir du répertoire du projet, il faut exécuter la commande suivante pour démarrer Sawtooth :
 
 ```bash
 docker-compose up
 ```
 
-And run this command to shut them down:
+Et lancez cette commande pour le shutdown :
 
 ```bash
 docker-compose down
 ```
 
-Once running, you should be able to access the validator at
-`tcp://localhost:4004` and the REST API at `http://localhost:8008`.
+Une fois lancé, vous devriez pouvoir accéder au validateur à l'adresse suivante
+`tcp://localhost:4004` et à l'API REST à `http://localhost:8008`.
 
-### Transaction Processor
+### _Transaction Processor_
 
-In a new terminal window, start up the transaction processor:
+Dans une nouvelle fenêtre de terminal, démarrez le processeur de transaction :
 
 ```bash
 cd {project directory}/processor
 npm start
 ```
 
-### Browser Client
+### _Browser Client_
 
-Start the client simply by opening `client/index.html` in any browser.
+Démarrez le client en ouvrant simplement `client/index.html` dans n'importe quel navigateur.
 
 ## Usage
 
-### Create a User
+### C*réation d'un utilisateur*
 
-Users are just public/private key-pairs stored in localStorage. Create one from
-the _"Select User"_ dropdown. You can use this same dropdown to switch between
-multiple users in localStorage.
+Les utilisateurs sont simplement des paires de clés publiques/privées stockées dans localStorage. Créez-en un à partir la liste déroulante _"Select User"_. Vous pouvez utiliser ce même menu déroulant pour basculer entre plusieurs utilisateurs depuis localStorage.
 
-### Create an Asset
+### _Création d'une devise_
 
-Simple type in the name of your asset under _"Create Asset"_ and click the
-create button. If you selected a user, you should see that asset appear in the
-list at the bottom.
+Il suffit de taper le nom de votre actif sous _"Create Asset"_ et de cliquer sur le bouton de création. Si vous avez sélectionné un utilisateur, vous devriez voir cette ressource apparaître dans la liste en bas.
 
-### Transfer an Asset
+### _Transfert d'une devise_
 
-Any asset you own can be transfered to another public key using the dropdowns
-under _"Transfer Asset"_. Note that the transfer must be accepted by that user
-before it is finalized.
+Tout actif que vous possédez peut être transféré vers une autre clé publique en utilisant les listes déroulantes sous _"Transfer Asset"_. Notez que le transfert doit être accepté par cet utilisateur avant qu'il ne soit finalisé.
 
-### Accept or Reject Transfers
+### _Acceptation ou refus d'une transaction_
 
-Any pending transfers for the selected user will appear under _"Accept Asset"_.
-These can be accepted (with an immediate change in ownership) or rejected with
-the corresponding buttons.
+Tous les transferts en attente pour l'utilisateur sélectionné apparaîtront sous la rubrique _"Accept Asset"_.
+Ils peuvent être acceptés (avec un changement immédiat de propriétaire) ou rejetés à l'aide des boutons correspondants.
