@@ -36,7 +36,7 @@ mais tout ce que vous devez savoir, c'est qu'à partir du répertoire du projet,
 docker-compose up
 ```
 
-Et lancez cette commande pour le shutdown :
+Ensuite lancez cette commande pour le shutdown :
 
 ```bash
 docker-compose down
