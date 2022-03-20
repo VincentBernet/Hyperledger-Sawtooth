@@ -1,6 +1,6 @@
 # BlockChain Project : Hyperledger-Sawtooth
 
-Ce projet a pour but de simuler une supply-chain sur la blockchain afin de suivre un produit.
+Ce projet a pour but de simuler une supply-chain sur la blockchain afin de suivre les transactions de monnaies créées en amont ! 
 
 <img src="./assets/client_screenshot.jpg"/>
 <div style="text-align:center"><em>Screenshot du client</em></div>
