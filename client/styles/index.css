@@ -46,4 +46,10 @@ header .title::after {
   font-size: 150px;
   line-height: 32px;
 }
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
 /*# sourceMappingURL=index.css.map */
